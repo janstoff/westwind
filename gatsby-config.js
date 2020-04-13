@@ -1,5 +1,5 @@
 module.exports = {
-  // pathPrefix: '/westwind', might be needed for production deployment
+  pathPrefix: '/westwind',
   plugins: [
     // Setting up efficient Image Handling
     {

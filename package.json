@@ -7,7 +7,7 @@
   "scripts": {
     "build": "gatsby build",
     "clean": "rimraf public/* .cache/*",
-    "deploy": "yarn clean && gatsby build && gh-pages -d public",
+    "deploy": "yarn clean && gatsby build --prefix-paths && gh-pages -d public",
     "dev": "gatsby develop",
     "serve": "gatsby serve",
     "start": "yarn develop",
