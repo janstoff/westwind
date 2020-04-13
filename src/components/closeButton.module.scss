@@ -1,0 +1,14 @@
+.closeButton {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  transition: all 0.2s;
+
+  img {
+    height: 1.3rem;
+
+    &:hover {
+      transform: translateY(0.2rem);
+    }
+  }
+}

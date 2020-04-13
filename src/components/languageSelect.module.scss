@@ -1,0 +1,57 @@
+@import '../styling/colors.scss';
+
+.languageSwitchContainer {
+  position: absolute;
+  right: 16rem;
+  top: 4rem;
+  @media only screen and (max-width: 760px) {
+    top: 2rem;
+    right: 12rem;
+  }
+  transition: all 0.4s;
+
+  :nth-child(1) {
+    border-radius: 10rem 0 0 10rem;
+  }
+
+  :nth-child(2) {
+    border-radius: 0 10rem 10rem 0;
+  }
+}
+
+.switchBtn {
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 0.7rem 1.4rem;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-size: 1rem;
+  line-height: 1.42857;
+  background: rgb(238, 237, 237) !important;
+  color: $color-text !important;
+  touch-action: manipulation;
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 0.8px;
+  transition: all 0.3s;
+  border: none !important;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    background: $color-primary-medium !important;
+    color: $color-text-white !important;
+    outline: none !important;
+  }
+}
+
+.switchBtnActive {
+  @extend .switchBtn;
+
+  background: $color-primary !important;
+  color: $color-text !important;
+}

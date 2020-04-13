@@ -1,0 +1,114 @@
+@import '../styling/colors.scss';
+
+.footer {
+  position: relative;
+  background-color: $color-primary;
+  color: $color-text;
+  padding: 5rem 0;
+  font-size: 1.4rem;
+  margin-top: 6rem;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+}
+
+.logoWrapper {
+  position: absolute;
+  margin-bottom: 4rem;
+
+  img {
+    padding: 2rem;
+    height: 20rem;
+    border-radius: 12px;
+
+    @media only screen and (max-width: 430px) {
+      height: 16rem;
+    }
+  }
+}
+
+.navWrapper {
+  position: relative;
+  width: 30%;
+  @media only screen and (max-width: 1820px) {
+    left: 20%;
+  }
+  @media only screen and (max-width: 1240px) {
+    left: 25%;
+  }
+  @media only screen and (max-width: 1040px) {
+    left: 28%;
+  }
+  @media only screen and (max-width: 760px) {
+    left: 32%;
+  }
+  @media only screen and (max-width: 430px) {
+    left: 35%;
+  }
+}
+
+.navigation {
+  max-width: 65%;
+  padding-top: 1rem;
+  font-size: 1.1rem;
+  border-top: 1.2px solid $color-secondary-light;
+  display: inline-block;
+
+  @media only screen and (max-width: 430px) {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      display: flex;
+
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+}
+
+.disclaimerWrapper {
+  width: 80%;
+  text-align: center;
+  display: inline-block;
+  @media only screen and (max-width: 430px) {
+    width: 100%;
+  }
+}
+
+.disclaimerText {
+  max-width: 80%;
+  padding-top: 1rem;
+  font-size: 1rem;
+  border-top: 1.2px solid $color-secondary-light;
+  display: inline-block;
+  text-align: start;
+}
+
+.link {
+  text-transform: uppercase;
+  color: $color-text;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: all 0.4s;
+
+  &:hover,
+  &:active {
+    color: $color-secondary-light;
+    box-shadow: 0 1rem 2rem rgba($color-secondary, 0.3);
+    transform: translateY(-0.2rem);
+  }
+}

@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis|Raleway');
+
+// MEDIA QUERY MANAGER
+
+// $breakpoint argument choices
+// - tiny
+// - small
+// - medium
+// - medium-plus
+// (standard size is implicit)
+// - large
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == tiny {
+    @media only screen and (max-width: 430px) {
+      @content;
+    }
+  }
+  @if $breakpoint == small {
+    @media only screen and (max-width: 760px) {
+      @content;
+    }
+  }
+  @if $breakpoint == medium {
+    @media only screen and (max-width: 1040px) {
+      @content;
+    }
+  }
+  @if $breakpoint == medium-plus {
+    @media only screen and (max-width: 1240px) {
+      @content;
+    }
+  }
+  @if $breakpoint == large {
+    @media only screen and (min-width: 1820px) {
+      @content;
+    }
+  }
+}
+
+/* basic style resetting */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /* set box-sizing to be inherited across our entire app */
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px, i.e. 10px if the browser default is 16px */
+  scroll-behavior: smooth;
+
+  @include respond(large) {
+    font-size: 75%; // 1rem = 12px
+  }
+  @include respond(medium) {
+    font-size: 56.25%; // 1rem = 9px
+  }
+  @include respond(small) {
+    font-size: 50%; // 1rem = 8px
+  }
+  @include respond(tiny) {
+    font-size: 37.5%; // 1rem = 6px
+  }
+}
+
+body {
+  font-family: 'Dosis', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

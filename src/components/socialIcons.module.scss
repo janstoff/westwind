@@ -1,0 +1,19 @@
+@import '../styling/colors.scss';
+
+.container {
+  display: inline-block;
+  position: absolute;
+  top: 4.2rem;
+  right: 26rem;
+  @media only screen and (max-width: 760px) {
+    top: 2.1rem;
+    right: 22rem;
+  }
+}
+
+.socialIcon {
+  padding: 1rem;
+  img {
+    height: 2.5rem;
+  }
+}

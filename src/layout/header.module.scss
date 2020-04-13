@@ -1,0 +1,33 @@
+@import '../styling/colors.scss';
+
+.header {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  height: auto;
+  width: 100%;
+  z-index: 1;
+}
+
+.homeLink {
+  display: inline-block;
+  text-decoration: none; /* no underline */
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  transition: all 1s;
+
+  img {
+    height: 9rem;
+
+    &:hover {
+      transform: translateY(-0rem);
+    }
+  }
+
+  @media only screen and (max-width: 760px) {
+    top: 1.5rem;
+    left: 2rem;
+  }
+}

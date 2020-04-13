@@ -1,0 +1,28 @@
+@import '../styling/colors';
+
+.primaryButton {
+  display: block;
+  position: absolute;
+  right: 0.1rem;
+  padding: 1.5rem 4rem;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  background-color: $color-primary;
+  color: $color-text;
+  text-decoration: none; /* no underline */
+  font-size: 2rem;
+  font-weight: 600;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-primary-medium, 0.2);
+  }
+
+  &:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba($color-primary-medium, 0.2);
+  }
+}

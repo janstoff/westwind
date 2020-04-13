@@ -1,0 +1,17 @@
+.headerWithIcon {
+  display: flex;
+  align-items: flex-start;
+
+  img {
+    height: 4rem;
+    margin-left: 2rem;
+
+    &:hover {
+      transform: translateY(-0rem);
+    }
+  }
+
+  h1 {
+    margin-left: 2rem;
+  }
+}
