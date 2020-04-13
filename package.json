@@ -1,8 +1,8 @@
 {
-  "name": "paddelbude",
-  "version": "0.1.0",
+  "name": "westwind",
+  "version": "0.0.0",
   "private": true,
-  "description": "Jan's Paddelbude WebApp",
+  "description": "Westwind Website",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",

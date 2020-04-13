@@ -1,12 +1,13 @@
 {
   "home-menu-entry": "home",
   "company": "Website Info",
-  "company-name": "Paddelbude",
-  "landing-heading-main": "For those paddlers",
-  "landing-heading-sub": "seeking quality & flair",
+  "company-name": "Westwind",
+  "landing-heading-main": "cold water surf",
+  "landing-heading-sub": "experience the best in danish water sports",
   "cookies-main": "This website may occasionally use cookies to enhance user experience.",
-  "main-button-text": "What I mean.",
-  "contact-button-text": "Get in touch",
+  "learn-button-text": "learn",
+  "rent-button-text": "rent",
+  "shop-button-text": "shop",
   "contact-menu-entry": "contact",
   "contact-headline": "contact",
   "instagram-headline": "Stuff going on",
@@ -31,7 +32,7 @@
   "send-button-text": "send",
   "back-to-top-link": "back to top",
   "learn-more-button-text": "learn more...",
-  "footer-copyright": "Copyright © Jan Steinhoff 2019",
+  "footer-copyright": "Copyright © Jan Steinhoff 2020",
   "footer-general-disclaimer": "",
   "footer-link-disclaimer": ""
 }

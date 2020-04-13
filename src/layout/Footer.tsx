@@ -6,16 +6,16 @@ import styles from './footer.module.scss';
 import LocalizedLink from '../components/LocalizedLink';
 import CompanyModal from '../components/CompanyModal';
 import {CloseButton} from '../components/CloseButton';
-import footerLogo from '../styling/logos/logo-brown-transparent.png';
+import footerLogo from '../styling/logos/westwind-logo-black.svg';
 
 class Footer extends React.Component {
   state = {
-    companyModalOpen: false
+    companyModalOpen: false,
   };
 
   private handleCompanyClick(): void {
     this.setState(() => ({
-      companyModalOpen: this.state.companyModalOpen ? false : true
+      companyModalOpen: this.state.companyModalOpen ? false : true,
     }));
     console.log('state', this.state);
   }
@@ -23,7 +23,7 @@ class Footer extends React.Component {
   private renderPageLinks(pages: string[]) {
     return (
       <ul>
-        {pages.map(page => (
+        {pages.map((page) => (
           <li key={page}>
             <LocalizedLink
               className={styles.link}

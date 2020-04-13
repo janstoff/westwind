@@ -11,7 +11,7 @@ if (typeof window !== 'undefined') {
   require('smooth-scroll')('a[href*="#"]', {
     speed: 800,
     speedAsDuration: true,
-    easing: 'easeInOutCubic'
+    easing: 'easeInOutCubic',
   });
 }
 
@@ -30,7 +30,6 @@ export default ({pathContext}: PageProps): JSX.Element => {
   return (
     <AppLayout locale={locale} pageStyle="home" path={pagePath}>
       <Landing />
-      <MotivationTeaser />
       <Instagram />
       <BackToTopLink />
     </AppLayout>

@@ -10,17 +10,25 @@ interface MainButtonProps {
   readonly to: string;
 }
 
+interface MainButtonsContainerProps {
+  readonly children: JSX.Element[];
+}
+
 const MainButton: React.SFC<MainButtonProps> = ({
   children,
-  to
+  to,
 }: MainButtonProps) => (
   <LocalizedLink className={styles.mainButton} to={to}>
     {children}
   </LocalizedLink>
 );
 
+const MainButtonsContainer: React.SFC<MainButtonsContainerProps> = ({
+  children,
+}) => <div className={styles.mainButtonsContainer}>{children}</div>;
+
 const Landing: React.SFC = () => (
-  <Fragment>
+  <>
     <header className={styles.base}>
       <div className={styles.heading}>
         <h1>
@@ -31,13 +39,21 @@ const Landing: React.SFC = () => (
             <Translated id="landing-heading-sub" />
           </span>
         </h1>
-        <MainButton to="/#motivation-teaser">
-          <Translated id="main-button-text" />
-        </MainButton>
+        <MainButtonsContainer>
+          <MainButton to="/#learn">
+            <Translated id="learn-button-text" />
+          </MainButton>
+          <MainButton to="/#rent">
+            <Translated id="rent-button-text" />
+          </MainButton>
+          <MainButton to="/#shop">
+            <Translated id="shop-button-text" />
+          </MainButton>
+        </MainButtonsContainer>
       </div>
       <DownButton />
     </header>
-  </Fragment>
+  </>
 );
 
 export default Landing;

@@ -123,7 +123,13 @@
   }
 }
 
+.mainButtonsContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .mainButton {
+  font-size: 1.3rem;
   display: inline-block;
   position: relative;
   padding: 1.5rem 4rem;
@@ -139,7 +145,7 @@
 
   &:hover {
     transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1rem 2rem rgba(116, 109, 109, 0.2);
   }
 
   &:active {

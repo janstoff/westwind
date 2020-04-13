@@ -5,12 +5,9 @@ import styles from './header.module.scss';
 import LanguageSwitch from '../components/LanguageSelect';
 import NavigationMenu from '../components/NavigationMenu';
 import SocialLinks from '../components/SocialLinks';
+import MainActivityLinks from '../components/MainActivityLinks';
 import LocalizedLink from '../components/LocalizedLink';
-import {SOCIAL_LINKS} from '../config';
-
-interface HomeLinkProps {
-  readonly headerLogo: string;
-}
+import {MAIN_ACTIVITIES, SOCIAL_LINKS} from '../config';
 
 interface HeaderProps {
   readonly locale: string;
@@ -39,6 +36,7 @@ const Header: FunctionComponent<HeaderProps> = ({
           : require('../styling/logos/westwind-logo-black.svg')
       }
     />
+    <MainActivityLinks mainActivities={MAIN_ACTIVITIES} />
     <SocialLinks socialLinks={SOCIAL_LINKS} pageStyle={pageStyle} />
     <LanguageSwitch locale={locale} path={path} />
     <NavigationMenu pageStyle={pageStyle} />
