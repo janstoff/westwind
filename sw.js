@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-9d73d801ff38806bde69.js"
+    "url": "webpack-runtime-0b9206f42afebb4decad.js"
   },
   {
     "url": "styles.a19f93e20ab46e83a4c5.css"
@@ -39,18 +39,26 @@ self.__precacheManifest = [
     "url": "framework-96405dbd8404e7bf29af.js"
   },
   {
-    "url": "app-01b33223a5eccbedfabe.js"
+    "url": "app-428dafba1d9159bd952f.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "cf2816556734be050b381f0a8da6819f"
+    "revision": "3bf4a4a0779f52d0be11d41e66750888"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-dc444b7ab43ef3eb1f4a.js"
   },
   {
+    "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
+    "revision": "67076d7f1e5435579e9bcc699e8c7d9a"
+  },
+  {
+    "url": "page-data/app-data.json",
+    "revision": "fbb1a3b4e8f0ffae0f33041ad629e2e3"
+  },
+  {
     "url": "manifest.webmanifest",
-    "revision": "c719ea9670d763ea032c78daf93b4d60"
+    "revision": "7757646f9e83d62d71d5ec6111edcf4c"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -138,12 +146,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/westwind`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-01b33223a5eccbedfabe.js`))) {
+  if (!resources || !(await caches.match(`/westwind/app-428dafba1d9159bd952f.js`))) {
     return await fetch(event.request)
   }
 
@@ -156,7 +164,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/westwind/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
